@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:a="http://www.lakala.com/schema/amber-core" 
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+						http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi-2.0.xsd
+						http://www.lakala.com/schema/amber-core http://www.lakala.com/schema/amber-core-1.0.xsd
+						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+						
+	<osgi:reference id="coreRegistry" interface="com.lakala.amber.core.CoreRegistry" availability="mandatory">
+		<osgi:reference-listener bind-method="bind" unbind-method="unbind" >
+			<bean class="com.lakala.amber.osgi.CoreRegistryListener" />
+		</osgi:reference-listener>
+	</osgi:reference>
+	
+	<osgi:reference id="dataSource" interface="javax.sql.DataSource" bean-name="dataSource" availability="mandatory"/>
+	<osgi:reference id="txTemplate" interface="org.springframework.transaction.support.TransactionOperations" bean-name="txTemplate" availability="mandatory"/>
+	<osgi:reference id="txManager" interface="org.springframework.transaction.PlatformTransactionManager" bean-name="txManager" availability="mandatory"/>
+
+</beans>

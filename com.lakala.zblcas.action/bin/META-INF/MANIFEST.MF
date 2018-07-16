@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.lakala.zblcas.action
+Bundle-SymbolicName: com.lakala.zblcas.action
+Bundle-Version: 1.0.0
+Bundle-Vendor: LAKALA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.lakala.amber.core;bundle-version="1.0.1",
+ com.lakala.amber.service.sqlmap;bundle-version="1.0.1",
+ com.lakala.amber.service.event;bundle-version="1.0.1",
+ com.lakala.amber.service.dict;bundle-version="1.0.1",
+ com.lakala.amber.service.id;bundle-version="1.0.1",
+ com.lakala.amber.security;bundle-version="1.0.1",
+ com.lakala.amber.channel.ncp;bundle-version="1.0.1",
+ org.springframework.context;bundle-version="3.2.3",
+ com.lakala.amber.common;bundle-version="1.0.0",
+ org.springframework.data.redis;bundle-version="1.2.1",
+ com.springsource.org.apache.commons.httpclient;bundle-version="3.1.0"
+Import-Package: 
+ com.lakala.amber.zblcas.common.action,
+ com.lakala.amber.zblcas.common.model,
+ com.lakala.amber.channel.stream,
+ com.lakala.amber.util,
+ com.lakala.amber.util.chain,
+ com.lakala.mc.filter,
+ javax.sql,
+ org.aopalliance.aop;version="[1.0.0,1.0.0]",
+ org.apache.commons.logging;version="[1.1.1,1.1.1]",
+ org.slf4j;version="1.7.2",
+ org.springframework.aop;version="[3.2.3.RELEASE,3.2.3.RELEASE]",
+ org.springframework.aop.framework;version="[3.2.3.RELEASE,3.2.3.RELEASE]",
+ org.springframework.beans.factory;version="3.2.3.RELEASE",
+ org.springframework.beans.factory.annotation;version="[3.2.3.RELEASE,3.2.3.RELEASE]",
+ org.springframework.cglib.core;version="[3.2.3.RELEASE,3.2.3.RELEASE]",
+ org.springframework.cglib.proxy;version="[3.2.3.RELEASE,3.2.3.RELEASE]",
+ org.springframework.core;version="[3.2.3.RELEASE,3.2.3.RELEASE]",
+ org.springframework.transaction;version="[3.2.3.RELEASE,3.2.3.RELEASE]",
+ org.springframework.transaction.annotation;version="[3.2.3.RELEASE,3.2.3.RELEASE]",
+ org.springframework.transaction.support;version="[3.2.3.RELEASE,3.2.3.RELEASE]",
+ org.springframework.util;version="3.2.3.RELEASE",
+ org.springframework.web.multipart;version="3.2.3.RELEASE"
+
+

@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:a="http://www.lakala.com/schema/amber-core" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+						http://www.lakala.com/schema/amber-core http://www.lakala.com/schema/amber-core-1.0.xsd">
+	
+	
+	<bean id="httpClient" class="org.apache.commons.httpclient.HttpClient">
+        <constructor-arg>
+            <ref bean="connectionManager" />
+        </constructor-arg>
+    </bean>
+    
+    <bean id="connectionManager" class="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager">
+        <property name="params" ref="connectionManagerParams" />
+    </bean>
+    
+    <bean id="connectionManagerParams" class="org.apache.commons.httpclient.params.HttpConnectionManagerParams">
+        <property name="connectionTimeout" value="4000"  />
+        <property name="soTimeout" value="30000" />
+        <property name="maxTotalConnections" value="128" />
+        <property name="defaultMaxConnectionsPerHost" value="64" />
+    </bean>
+	
+</beans>

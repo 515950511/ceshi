@@ -1,0 +1,45 @@
+<x:beans xmlns:x="http://www.springframework.org/schema/beans"
+	xmlns="http://www.lakala.com/schema/amber-core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+						http://www.lakala.com/schema/amber-core http://www.lakala.com/schema/amber-core-1.0.xsd">
+	
+	<x:bean id="executableAction" class="com.lakala.amber.zblcas.common.action.ExecutableAction" >
+		<x:property name="sqlMap" ref="sqlMap" ></x:property>
+<!-- 		<x:property name="transactionTemplate" ref="txTemplate" ></x:property> -->
+		<x:property name="transportId" value="ncpTransport" ></x:property>
+		<x:property name="header">
+			<x:list>
+				<x:value>_channelId</x:value>
+			</x:list>
+		</x:property>
+		<x:property name="returnCodeValidator">
+		    <x:bean class="com.lakala.amber.common.validator.StdReturnCodeValidator">
+		        <x:property name="keyName" value="retCode"/>
+		        <x:property name="successReturnCode" value="000000"/>
+		        <x:property name="messageKeyName" value="retMsg"/>
+		    </x:bean>
+		</x:property>
+	</x:bean>
+	
+	<x:bean id="reptileExecutableAction" class="com.lakala.amber.zblcas.common.action.ExecutableAction" >
+		<x:property name="sqlMap" ref="sqlMap" ></x:property>
+<!-- 		<x:property name="transactionTemplate" ref="txTemplate" ></x:property> -->
+		<x:property name="transportId" value="reptileNcpTransport" ></x:property>
+		<x:property name="header">
+			<x:list>
+				<x:value>_channelId</x:value>
+			</x:list>
+		</x:property>
+		<x:property name="returnCodeValidator">
+		    <x:bean class="com.lakala.amber.common.validator.StdReturnCodeValidator">
+		        <x:property name="keyName" value="retCode"/>
+		        <x:property name="successReturnCode" value="000000"/>
+		        <x:property name="messageKeyName" value="retMsg"/>
+		    </x:bean>
+		</x:property>
+	</x:bean>
+    
+    <x:bean id="abstractJdbcAction" class="com.lakala.amber.action.support.AbstractJdbcAction" abstract="true">
+        <x:property name="sqlMap" ref="sqlMap"/>
+    </x:bean>
+</x:beans>

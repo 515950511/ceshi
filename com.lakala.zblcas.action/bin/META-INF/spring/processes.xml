@@ -1,0 +1,64 @@
+<x:beans xmlns:x="http://www.springframework.org/schema/beans"
+	xmlns="http://www.lakala.com/schema/amber-core" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+						http://www.lakala.com/schema/amber-core http://www.lakala.com/schema/amber-core-1.0.xsd">
+	
+	<!-- 中北联企业信用名片 -->
+	<process id="enterpriseCreditCard" template="queryTemplate" interceptors="publicInterceptors" >
+		<in-fields>
+			<field name="entName" />
+		</in-fields>
+		<out-fields>
+	        <field-map name="vMap">
+	        	<field name="trademark"/>	<!-- 商标 -->
+	        	<field name="patent"/>	<!-- 专利 -->
+	        	<field name="copyright"/>	<!-- 著作权 -->
+	        	<field name="highNewTechnologyEnterprise"/>	<!-- 高新技术企业 -->
+	        	<field name="vitalityScore"/>	<!-- 生命力指数 -->
+	        	<field name="pMapKeys"/>	<!-- 专利申请至今的总数/返回日期 (x轴)-->
+	        	<field name="pMapVals"/>	<!-- 专利申请至今的总数/返回日期对应总数 (y轴)-->
+	        	<field name="cMapKeys"/>	<!-- 著作权申请至今的总数/返回日期 (x轴)-->
+	        	<field name="cMapVals"/>	<!-- 著作权申请至今的总数/返回日期对应总数 (y轴)-->
+	        </field-map>
+		    <field-map name="pMap">
+		    	<field name="recruitInfo"/>	<!-- 招聘信息 -->
+		    	<field name="rMapKeys"/>	<!-- 招聘信息-x轴对应月份 -->
+		    	<field name="rMapVals"/>	<!-- 招聘信息-y轴月份对应招聘数量 -->
+		    	<field name="management"/>	<!-- 管理人员 -->
+		    	<field name="pulseScore"/>	<!-- 脉搏指数 -->
+		    </field-map>
+		    <field-map name="bMap">
+		    	<field name="companyType"/>	<!-- 公司类型(是否上市) -->
+		    	<field name="registerCapitalNum"/>	<!-- 注册资本变更次数 -->
+		    	<field name="bloodScore"/>	<!-- 血压指数 -->
+		    	<field name="enterpriseAge"/>	<!-- 企业年龄 -->
+		    	<field name="enterpriseLegalPerson"/>	<!-- 企业法人 -->
+		    	<field name="enterpriseAddress"/>	<!-- 企业注册地址-->
+		    	<field name="enterpriseStatus"/>	<!-- 企业状态 -->
+		    	<field name="registerCapitalAmount"/>	<!-- 企业注册资本 -->
+		    </field-map>
+		    <field-map name="hMap">
+		    	<field name="honorInfo"/>	<!-- 荣誉信息 -->
+		    	<field name="negativeInfo"/>	<!-- 负面信息 -->
+		    	<field name="dishonestyRecord"/>	<!-- 失信记录 -->
+		    	<field name="behaviorScore"/>	<!-- 行为指数 -->
+		    	<field name="enterpriseIndustry"/>	<!-- 企业行业 -->
+		    </field-map>
+		    <field name="registCapiChartXYear"/>	<!-- 注册资本图表/年 (x轴)-->
+		    <field name="registCapiChartYValue"/>	<!-- 注册资本图表/值 (y轴)-->
+<!-- 		    <field name="trademarkChartXYear"/>	商标图表/年 (x轴) -->
+<!-- 		    <field name="trademarkChartYValue"/>	商标图表/值 (y轴) -->
+		</out-fields>
+		<actions>
+			<action id="query" ref="qryEnterpriseCreditCardAction"></action>
+		</actions>
+	</process>
+	
+	<action id="qryEnterpriseCreditCardAction" class="com.lakala.zblcas.action.QryEnterpriseCreditCardAction" parent="executableAction">
+		<x:property name="customerid" value="${zd.customerid}"></x:property> 
+	</action>
+	
+</x:beans>
