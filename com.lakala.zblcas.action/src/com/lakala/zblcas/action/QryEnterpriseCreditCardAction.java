@@ -1,3 +1,5 @@
+//测试一下
+//测试两下
 /**  
 * 鏂囦欢鍚嶏細QryEnterpriseCreditCardAction.java <br>
 * 鍖呭悕锛歝om.lakala.zblcas.action <br>
@@ -40,7 +42,7 @@ import com.lakala.amber.zblcas.common.model.DICT;
  * 淇敼鍘熷洜锛�  鎻忚堪淇敼鍘熷洜鍜岀敤閫�<br>
  *   
  */
-//测试一下
+
 public class QryEnterpriseCreditCardAction extends ExecutableAction{
 	
 	private static Logger logger = LoggerFactory.getLogger(QryEnterpriseCreditCardAction.class);
