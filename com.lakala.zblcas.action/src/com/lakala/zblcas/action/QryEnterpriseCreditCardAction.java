@@ -1,10 +1,10 @@
 /**  
-* 文件名：QryEnterpriseCreditCardAction.java <br>
-* 包名：com.lakala.zblcas.action <br>
-* 版本信息：V1.0  <br>
-* 日期：2016年10月17日  <br>
-* Copyright 中北联合信用评估 Corporation 2016<br>
-* 版权所有 北京中北联合信用评估有限公司
+* 鏂囦欢鍚嶏細QryEnterpriseCreditCardAction.java <br>
+* 鍖呭悕锛歝om.lakala.zblcas.action <br>
+* 鐗堟湰淇℃伅锛歏1.0  <br>
+* 鏃ユ湡锛�2016骞�10鏈�17鏃�  <br>
+* Copyright 涓寳鑱斿悎淇＄敤璇勪及 Corporation 2016<br>
+* 鐗堟潈鎵�鏈� 鍖椾含涓寳鑱斿悎淇＄敤璇勪及鏈夐檺鍏徃
 *  
 */
 package com.lakala.zblcas.action;
@@ -21,25 +21,26 @@ import com.lakala.amber.zblcas.common.action.ExecutableAction;
 import com.lakala.amber.zblcas.common.model.DICT;
 
 /**  
- * 项目名称：com.lakala.zblcas.action<br>
- * 包名：com.lakala.zblcas.action <br>
- * 类名称：QryEnterpriseCreditCardAction  <br>
- * 类描述：简单描述该类的主要功能<br>
+ * 椤圭洰鍚嶇О锛歝om.lakala.zblcas.action<br>
+ * 鍖呭悕锛歝om.lakala.zblcas.action <br>
+ * 绫诲悕绉帮細QryEnterpriseCreditCardAction  <br>
+ * 绫绘弿杩帮細绠�鍗曟弿杩拌绫荤殑涓昏鍔熻兘<br>
  ******************************************************<br>
- * 主要方法：<br>
- *   描述各个方法用途  <br>
- *   描述各个方法用途  <br>
+ * 涓昏鏂规硶锛�<br>
+ *   鎻忚堪鍚勪釜鏂规硶鐢ㄩ��  <br>
+ *   鎻忚堪鍚勪釜鏂规硶鐢ㄩ��  <br>
  ******************************************************<br>
- * 作者：chengxuehong  <br>
- * 创建日期：2016年10月17日 <br>
- * 公司：北京中北联合信用评估有限公司<br>
- * 版本：V1.0<br>
+ * 浣滆�咃細chengxuehong  <br>
+ * 鍒涘缓鏃ユ湡锛�2016骞�10鏈�17鏃� <br>
+ * 鍏徃锛氬寳浜腑鍖楄仈鍚堜俊鐢ㄨ瘎浼版湁闄愬叕鍙�<br>
+ * 鐗堟湰锛歏1.0<br>
  *******************************************************<br>
- * 修改人：chengxuehong  <br>
- * 修改时间：2016年10月17日 下午5:06:44  <br>
- * 修改原因：  描述修改原因和用途<br>
+ * 淇敼浜猴細chengxuehong  <br>
+ * 淇敼鏃堕棿锛�2016骞�10鏈�17鏃� 涓嬪崍5:06:44  <br>
+ * 淇敼鍘熷洜锛�  鎻忚堪淇敼鍘熷洜鍜岀敤閫�<br>
  *   
  */
+//测试一下
 public class QryEnterpriseCreditCardAction extends ExecutableAction{
 	
 	private static Logger logger = LoggerFactory.getLogger(QryEnterpriseCreditCardAction.class);
